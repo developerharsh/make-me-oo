@@ -1,15 +1,14 @@
 package org.oop;
 
-public class DistanceAndDirectionCalculator {
-    public static double distance(Point from, Point to) {
-        double xDistance = to.getX() - from.getX();
-        double yDistance = to.getY() - from.getY();
-        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-    }
+import java.sql.SQLOutput;
 
-    public static double direction(Point from, Point to) {
-        double xDistance = to.getX() - from.getX();
-        double yDistance = to.getY() - from.getY();
-        return Math.atan2(yDistance, xDistance);
+public class DistanceAndDirectionCalculator
+{
+    public static void main(String args[])
+    {
+        Point from=new Point(5,6);
+        Point to=new Point(1,9);
+        System.out.println(from.direction(to));
+        System.out.println(from.distance(to));
     }
 }
